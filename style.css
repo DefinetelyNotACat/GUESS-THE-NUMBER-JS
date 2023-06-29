@@ -1,0 +1,25 @@
+h1
+{
+    text-align: center;
+}
+#userNum
+{
+    margin: auto;
+
+    display: block;
+
+    width: 3%;
+    text-align: center;
+
+    background-color: yellow;
+}
+
+body
+{
+    background-color: rgba(8, 160, 194, 0.865);
+}
+#sayNum
+{
+    text-align: center;
+    background-color: red;
+}
