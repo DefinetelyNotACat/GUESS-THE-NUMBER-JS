@@ -130,20 +130,6 @@ document.addEventListener("DOMContentLoaded", setNum)
 document.addEventListener("DOMContentLoaded", setLifes)
 document.addEventListener("DOMContentLoaded", setRandomNum)
 
-/*
-function setLifes()
-{
-    while(!userLifes)
-    {
-        quote = "scegli tra un numero compreso tra 1 e ";
-        userLifes = prompt("quante vite vuoi");
-
-        // Here, instead of appending userLifes straight away, we append colored HTML span containing userLifes
-        document.getElementById("sayNum").innerHTML = quote + userNum + " hai " + "<span style='color:blue'>" + userLifes + "</span>" + " vite";
-    }
-}
-
-*/
 
 
 
