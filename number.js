@@ -46,11 +46,13 @@ function setRandomNum()
     console.log(randomNum)
 }
 
-document.getElementById("userNum").addEventListener("input", function () {
+document.getElementById("userNum").addEventListener("input", function () 
+{
     const userInput = parseInt(this.value);
     const maxNum = parseInt(this.getAttribute("max"));
   
-    if (userInput > maxNum) {
+    if (userInput > maxNum) 
+    {
       this.value = maxNum; // Set the value to the maximum allowed
     }
   });
@@ -109,24 +111,25 @@ document.getElementById("guessedNum").addEventListener("click", function() {
         
         allNumbersElement.innerHTML = ''
 
+        // Now, the numbers array will be sorted correctly
+        numbers.sort((a, b) => a - b)
+
         for(let i = 0; i < numbers.length; i++)
         {
 
             let colorElement
-            numbers.sort()
 
             if(numbers[i] > randomNum)
             {
+                
                 colorElement = '<span style = "color:blue">' + numbers[i] + '</span>'
-                numbers.sort()
+                
 
             }
             else if(numbers[i] < randomNum)
             {
                 colorElement = '<span style = "color:red">' + numbers[i] + '</span>'
-                numbers.sort()
-
-
+                
             }
 
             else
@@ -136,6 +139,7 @@ document.getElementById("guessedNum").addEventListener("click", function() {
             allNumbersElement.innerHTML += ' ' + colorElement; 
 
         }
+
         
     }
     else if(userLifes == 0)
