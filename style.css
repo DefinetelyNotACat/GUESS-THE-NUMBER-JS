@@ -16,10 +16,28 @@ h1
 
 body
 {
-    background-color: rgba(182, 5, 195, 0.865);
+    background-color: rgba(203, 203, 203, 0.865);
 }
 #sayNum
 {
     text-align: center;
     background-color: red;
+}
+
+.centered
+{
+    margin: auto;
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+}
+
+.centered #userNum
+{
+   margin-bottom: 20px;
+}
+
+*
+{
+    font-family: sans-serif;
 }

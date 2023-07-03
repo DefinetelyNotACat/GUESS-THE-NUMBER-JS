@@ -45,6 +45,16 @@ function setRandomNum()
     randomNum = Math.floor(Math.random()*userNum +1)
     console.log(randomNum)
 }
+
+document.getElementById("userNum").addEventListener("input", function () {
+    const userInput = parseInt(this.value);
+    const maxNum = parseInt(this.getAttribute("max"));
+  
+    if (userInput > maxNum) {
+      this.value = maxNum; // Set the value to the maximum allowed
+    }
+  });
+  
 //puoi rimpiazzare function() con () =>
 document.getElementById("guessedNum").addEventListener("click", function() {
     if(userLifes>0)
@@ -64,6 +74,7 @@ document.getElementById("guessedNum").addEventListener("click", function() {
         {
             document.getElementById("tellWin").textContent = "hai indovinato!"
             userLifes = -1
+
         }
         else 
         {
@@ -75,11 +86,11 @@ document.getElementById("guessedNum").addEventListener("click", function() {
 
             if (userNumber<randomNum)
             {
-                document.getElementById("tellWin").textContent ="stavo pensando ad un numero piu' grande"
+                document.getElementById("tellWin").innerHTML ="stavo pensando ad un numero piu' <strong> grande </strong> "
             } 
             else
             {
-                document.getElementById("tellWin").textContent ="stavo pensando ad un numero piu' piccolo"
+                document.getElementById("tellWin").innerHTML ="stavo pensando ad un numero piu' <i>piccolo </i> "
             }
 
             sayLifes(quote,userLifes)
@@ -100,26 +111,40 @@ document.getElementById("guessedNum").addEventListener("click", function() {
 
         for(let i = 0; i < numbers.length; i++)
         {
-            let colorElement
 
+            let colorElement
+            numbers.sort()
 
             if(numbers[i] > randomNum)
             {
                 colorElement = '<span style = "color:blue">' + numbers[i] + '</span>'
+                numbers.sort()
+
             }
-            else
+            else if(numbers[i] < randomNum)
             {
                 colorElement = '<span style = "color:red">' + numbers[i] + '</span>'
+                numbers.sort()
 
+
+            }
+
+            else
+            {
+                colorElement = '<span style = "color:white">' + numbers[i] + '</span>'
             }
             allNumbersElement.innerHTML += ' ' + colorElement; 
 
         }
         
     }
-    else
+    else if(userLifes == 0)
     {
         document.getElementById("tellWin").textContent ="mi dispiace, hai perso, ziopera, il numero a cui pensavo era il " +randomNum
+    }
+    else
+    {
+        document.getElementById("tellWin").textContent = "inutile che continui, hai vinto! "
     }
 });
 
