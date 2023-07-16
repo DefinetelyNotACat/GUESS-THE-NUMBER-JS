@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 h1
 {
     text-align: center;
@@ -21,7 +23,7 @@ body
 #sayNum
 {
     text-align: center;
-    background-color: red;
+    font-family: Source Code Pro, monospace;
 }
 
 .centered
@@ -39,9 +41,9 @@ body
 
 *
 {
-    font-family: sans-serif;
+    font-family: Calibri;
 }
-span{
+span :not(#meh){
     display: inline-block;
     width: 3%;
     height: 3%;

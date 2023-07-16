@@ -24,7 +24,7 @@ function setLifes()
 {
     while(!userLifes)
     {
-        quote = "scegli tra un numero compreso tra 1 e "
+        quote = "scegli un numero compreso tra " + "<span id = 'meh' style='color: red;'>1</span>" + " e "
         userLifes = prompt("quante vite vuoi")
         sayLifes(quote, userLifes)
     }
@@ -32,7 +32,7 @@ function setLifes()
 
 function sayLifes(quote, userLifes)
 {
-    document.getElementById("sayNum").textContent=quote + userNum + " hai " + userLifes + " vite";
+    document.getElementById("sayNum").innerHTML=quote + userNum + " hai " + userLifes + " vite";
 
 }
 
