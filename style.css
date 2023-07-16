@@ -8,7 +8,7 @@ h1
 
     display: block;
 
-    width: 3%;
+    width: 4%;
     text-align: center;
 
     background-color: yellow;
@@ -40,4 +40,12 @@ body
 *
 {
     font-family: sans-serif;
+}
+span{
+    display: inline-block;
+    width: 3%;
+    height: 3%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+
 }
