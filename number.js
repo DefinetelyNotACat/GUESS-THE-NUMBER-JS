@@ -134,7 +134,7 @@ document.getElementById("guessedNum").addEventListener("click", function() {
 
             else
             {
-                colorElement = '<span style = "color:rgb(0,255,0)">' + numbers[i] + '</span>'
+                colorElement = '<span style = "color:white">' + numbers[i] + '</span>'
             }
             allNumbersElement.innerHTML += ' ' + colorElement; 
 
@@ -148,6 +148,7 @@ document.getElementById("guessedNum").addEventListener("click", function() {
     }
     else
     {
+        document.getElementById("tellWin").textContent = "inutile che continui, hai vinto! "
     }
 });
 

@@ -43,7 +43,7 @@ body
 {
     font-family: Calibri;
 }
-span :not(#meh){
+:not(meh) span {
     display: inline-block;
     width: 3%;
     height: 3%;
